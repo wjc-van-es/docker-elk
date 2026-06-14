@@ -1,0 +1,109 @@
+[
+    {
+        "Id": "sha256:3922a52de1510303191cad72f968ed9584d4fe16487fa38e84959d9f61640ac0",
+        "RepoTags": [
+            "docker-elk-elasticsearch:latest"
+        ],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-05-25T22:19:41.11320881Z",
+        "Config": {
+            "User": "1000:0",
+            "ExposedPorts": {
+                "9200/tcp": {},
+                "9300/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/share/elasticsearch/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "container=oci",
+                "ELASTIC_CONTAINER=true",
+                "SHELL=/bin/bash"
+            ],
+            "Entrypoint": [
+                "/bin/tini",
+                "--",
+                "/usr/local/bin/docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "eswrapper"
+            ],
+            "WorkingDir": "/usr/share/elasticsearch",
+            "Labels": {
+                "architecture": "x86_64",
+                "build-date": "2026-05-25T11:51:35Z",
+                "com.docker.compose.project": "docker-elk",
+                "com.docker.compose.service": "elasticsearch",
+                "com.docker.compose.version": "5.1.4",
+                "com.redhat.component": "ubi9-minimal-container",
+                "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+                "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream",
+                "description": "You know, for search.",
+                "distribution-scope": "public",
+                "io.buildah.version": "1.42.2",
+                "io.k8s.description": "The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+                "io.k8s.display-name": "Red Hat Universal Base Image 9 Minimal",
+                "io.openshift.expose-services": "",
+                "io.openshift.tags": "minimal rhel9",
+                "maintainer": "infra@elastic.co",
+                "name": "Elasticsearch",
+                "org.label-schema.build-date": "2026-05-25T22:10:36.017759931Z",
+                "org.label-schema.license": "Elastic-License-2.0",
+                "org.label-schema.name": "Elasticsearch",
+                "org.label-schema.schema-version": "1.0",
+                "org.label-schema.url": "https://www.elastic.co/products/elasticsearch",
+                "org.label-schema.usage": "https://www.elastic.co/guide/en/elasticsearch/reference/index.html",
+                "org.label-schema.vcs-ref": "c402c2b36d90eae29c0182f86bd9050fd0b746cc",
+                "org.label-schema.vcs-url": "https://github.com/elastic/elasticsearch",
+                "org.label-schema.vendor": "Elastic",
+                "org.label-schema.version": "9.4.2",
+                "org.opencontainers.image.created": "2026-05-25T22:10:36.017759931Z",
+                "org.opencontainers.image.documentation": "https://www.elastic.co/guide/en/elasticsearch/reference/index.html",
+                "org.opencontainers.image.licenses": "Elastic-License-2.0",
+                "org.opencontainers.image.revision": "c402c2b36d90eae29c0182f86bd9050fd0b746cc",
+                "org.opencontainers.image.source": "https://github.com/elastic/elasticsearch",
+                "org.opencontainers.image.title": "Elasticsearch",
+                "org.opencontainers.image.url": "https://www.elastic.co/products/elasticsearch",
+                "org.opencontainers.image.vendor": "Elastic",
+                "org.opencontainers.image.version": "9.4.2",
+                "release": "1",
+                "summary": "Elasticsearch",
+                "url": "https://catalog.redhat.com/en/search?searchType=containers",
+                "vcs-ref": "41b6a1aa72abe264a7d7bbff8d6c7e8c099df7cc",
+                "vcs-type": "git",
+                "vendor": "Elastic",
+                "version": "9.4.2"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1596127421,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/ada57ae8dcc1ac753112e12b89044211ee2381a42d56ef264d0600e82fdfc3a8/diff:/var/lib/docker/overlay2/4364fd9d9749183e6c39e202b1a48fb146c7e6825ab6aad2404d84a1cdd7ae8c/diff:/var/lib/docker/overlay2/736f5292d7dbe2a31d36c2c4530dc47d55693cd1ae6f8c85047fa2e351bec088/diff:/var/lib/docker/overlay2/4633339251bb17ebdc815de09ec3ad7b84f59701f4bc0201cbc350ad1457fa12/diff:/var/lib/docker/overlay2/83d7e5f7148f12301b0154c4c3fec49658ad651ff5c2d150752f50d8b6326c2f/diff:/var/lib/docker/overlay2/6e5e909def4eecdd98c8b4e456f47c919951ebbd1bb2051006a58781f76989ba/diff:/var/lib/docker/overlay2/e97222e298f46f53687a6db8db18f11ac409479a1e2666c27e8db765a3b739e3/diff:/var/lib/docker/overlay2/ab09ca13d660718b285649d7dba8cb58ff4a39620fff6a0f253c97deb6348c4e/diff:/var/lib/docker/overlay2/780619168eb6e66e4e6a1b425f5b9dd84fe9164b255ad47a60e8a80890781f18/diff",
+                "MergedDir": "/var/lib/docker/overlay2/b6c2d37de6471b6d47b37b34daca97f34cc0146899daf088184906cfd0f22911/merged",
+                "UpperDir": "/var/lib/docker/overlay2/b6c2d37de6471b6d47b37b34daca97f34cc0146899daf088184906cfd0f22911/diff",
+                "WorkDir": "/var/lib/docker/overlay2/b6c2d37de6471b6d47b37b34daca97f34cc0146899daf088184906cfd0f22911/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5f2a6585088d8993d63a02203f6c8cbce82da39453a7a55cda8df32453b8060b",
+                "sha256:4529b55a993151c824113a3eab1c27a1582b7eb186a9cccf2f31063758d77e5e",
+                "sha256:7e5e4f1ea85873a9834a4307f532e4530c36b4f6b75b93e6d883e55d98ba4fb0",
+                "sha256:615b0f5d3037f1f40677c03b0e9c322cc8d060d1da1fbc91666b0157bfb59228",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:57dc9f30df804ca9554446b3489d21e6756521ac8f4ef4cac05cd4c440d4eb87",
+                "sha256:6cb3697bcc55d40519da5ba223b9a273e5c8b2af74c6199290b9cdd04bcfefc4",
+                "sha256:3f1a4271a32afa11b7e4d1d3ed2b433adf903461576faa62fe65d61a484ecede",
+                "sha256:757816bccbfd85a82a047b5c06a2df081f18eee374e3f87ab2baf31186dbb5ab",
+                "sha256:c553acd1fe80069f9109ea5c737345d9fcab8338af8647e42f24c6e8d71eb519"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-06-14T00:47:31.697565518+02:00"
+        }
+    }
+]

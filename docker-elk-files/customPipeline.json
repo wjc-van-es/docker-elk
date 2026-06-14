@@ -1,0 +1,18 @@
+{
+  "description": "Extract timestamp from message",
+  "processors": [
+    {
+      "grok": {
+        "field": "message",
+        "patterns": ["%{DATA:log_timestamp} - %{WORD:log_level} - %{GREEDYDATA:log_message}"]
+      }
+    },
+    {
+      "date": {
+        "field": "log_timestamp",
+        "formats": ["dd/MMM/yyyy HH:mm:ss"],
+        "timezone": "UTC"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "CreatedAt": "2026-06-14T00:47:32+02:00",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "0d2d0eb7e613e3f08e790a0fabda8b4d78dceb57f31d47a0b157f2b519073946",
+            "com.docker.compose.project": "docker-elk",
+            "com.docker.compose.version": "5.1.4",
+            "com.docker.compose.volume": "elasticsearch"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/docker-elk_elasticsearch/_data",
+        "Name": "docker-elk_elasticsearch",
+        "Options": null,
+        "Scope": "local"
+    }
+]
