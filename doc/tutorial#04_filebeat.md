@@ -39,6 +39,7 @@ h1,h2,h3,h4,h5 {
 # Tutorial #04 - Collecting logs with Filebeat
 
 ## Context
+- [https://www.youtube.com/watch?v=GLGCJU4nR3M&list=PLApq3NZNbtW4v4qtTJR1-F4uFA5eXMTNl&index=4](https://www.youtube.com/watch?v=GLGCJU4nR3M&list=PLApq3NZNbtW4v4qtTJR1-F4uFA5eXMTNl&index=4)
 - _Filebeat_ is a service that can monitor logfiles to ingest their logs into _ElasticSearch_.
 - We can install & configure it on our laptop and point it to some of our application log files like
 
