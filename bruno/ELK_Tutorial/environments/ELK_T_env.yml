@@ -1,0 +1,8 @@
+name: ELK_T_env
+variables:
+  - name: baseUrl
+    value: http://localhost
+  - name: username
+    value: elastic
+  - name: password
+    value: changeme

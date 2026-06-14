@@ -1,0 +1,78 @@
+info:
+  name: Insert_movies_mapping
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{baseUrl}}:9200/movies"
+  body:
+    type: json
+    data: |-
+      {
+        "mappings": {
+          "properties": {
+            "Title": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "Year": {
+              "type": "integer"
+            },
+            "Rated": {
+              "type": "keyword"
+            },
+            "Released": {
+              "type": "date",
+              "format": "dd MMM yyyy"
+            },
+            "Runtime": {
+              "type": "keyword"
+            },
+            "Genre": {
+              "type": "text"
+            },
+            "Director": {
+              "type": "text"
+            },
+            "Writer": {
+              "type": "text"
+            },
+            "Actors": {
+              "type": "text"
+            },
+            "Language": {
+              "type": "text"
+            },
+            "Country": {
+              "type": "text"
+            },
+            "Awards": {
+              "type": "text"
+            },
+            "imdbRating": {
+              "type": "float"
+            },
+            "imdbID": {
+              "type": "keyword"
+            },
+            "Type": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+  auth:
+    type: basic
+    username: "{{username}}"
+    password: "{{password}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

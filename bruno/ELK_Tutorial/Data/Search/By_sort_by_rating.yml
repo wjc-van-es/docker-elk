@@ -1,0 +1,32 @@
+info:
+  name: By_sort_by_rating
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}:9200/movies/_search"
+  body:
+    type: json
+    data: |-
+      {
+        "query": {
+          "match": {
+            "Genre": "Animation"
+          }
+        },
+        "sort": [
+          {"imdbRating": "desc"}
+        ],
+        "size": 250
+      }
+  auth:
+    type: basic
+    username: "{{username}}"
+    password: "{{password}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
