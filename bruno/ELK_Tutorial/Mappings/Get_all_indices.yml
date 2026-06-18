@@ -1,0 +1,18 @@
+info:
+  name: Get_all_indices
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{baseUrl}}:9200/_cat/indices"
+  auth:
+    type: basic
+    username: "{{username}}"
+    password: "{{password}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
