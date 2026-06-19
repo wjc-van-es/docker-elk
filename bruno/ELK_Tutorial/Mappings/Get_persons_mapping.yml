@@ -1,11 +1,11 @@
 info:
-  name: DELETE index person
+  name: Get_persons_mapping
   type: http
-  seq: 4
+  seq: 5
 
 http:
-  method: DELETE
-  url: "{{baseUrl}}:9200/person"
+  method: GET
+  url: "{{baseUrl}}:9200/persons/_mapping"
   auth:
     type: basic
     username: "{{username}}"

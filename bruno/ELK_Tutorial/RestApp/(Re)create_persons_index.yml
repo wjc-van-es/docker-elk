@@ -1,0 +1,18 @@
+info:
+  name: (Re)create_persons_index
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}:8080/api/indices/recreate"
+  auth:
+    type: basic
+    username: "{{username}}"
+    password: "{{password}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

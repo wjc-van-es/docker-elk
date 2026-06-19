@@ -1,0 +1,43 @@
+info:
+  name: Insert_persons
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}:8080/api/person/add-all"
+  body:
+    type: json
+    data: |-
+      [
+        {
+          "id": "01",
+          "firstName": "Donald",
+          "lastName": "Duck"
+        },
+        {
+          "id": "02",
+          "firstName": "Guust",
+          "lastName": "Flater"
+        },
+        {
+          "id": "03",
+          "firstName": "Jan",
+          "lastName": "Tit"
+        },
+        {
+          "id": "04",
+          "firstName": "Dagobert",
+          "lastName": "Duck"
+        }
+      ]
+  auth:
+    type: basic
+    username: "{{username}}"
+    password: "{{password}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
