@@ -1,0 +1,29 @@
+info:
+  name: Persons_FindByLastName
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}:9200/persons/_search"
+  body:
+    type: json
+    data: |-
+      {
+        "query": {
+          "match": {
+            "lastName": "Duck"
+          }
+        },
+        "size": 25
+      }
+  auth:
+    type: basic
+    username: "{{username}}"
+    password: "{{password}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

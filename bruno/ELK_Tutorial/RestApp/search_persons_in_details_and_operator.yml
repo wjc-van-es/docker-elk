@@ -1,11 +1,18 @@
 info:
-  name: Insert_persons
+  name: search_persons_in_details_and_operator
   type: http
-  seq: 3
+  seq: 4
 
 http:
   method: POST
-  url: "{{baseUrl}}:8080/api/person/add-all"
+  url: "{{baseUrl}}:8080/api/person/search-in-details?terms=miser+Disney&operator=and"
+  params:
+    - name: terms
+      value: miser+Disney
+      type: query
+    - name: operator
+      value: and
+      type: query
   body:
     type: json
     data: |-
